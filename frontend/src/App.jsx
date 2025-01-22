@@ -3,12 +3,14 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import React from 'react'
 import {
   Landing, EventForm, EventList, Error,
-  HomePage
+  HomePage, EditPage
 } from './pages'
 
 import { action as eventFormAction} from './pages/EventForm'
 import { loader as allEventLoader } from './pages/EventList'
 import { action as deleteAction} from './pages/DeletePage'
+import { action as editAction } from './pages/EditPage'
+import { loader as editLoader } from './pages/EditPage'
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,12 @@ const router = createBrowserRouter([
         path: 'EventForm',
         element: <EventForm />,
         action: eventFormAction,
+      },
+      {
+        path: 'edit-job/:id',
+        element: <EditPage />,
+        loader: editLoader,
+        action: editAction,
       },
       {
         path: 'delete-page/:id',

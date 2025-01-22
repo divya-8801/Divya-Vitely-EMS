@@ -25,7 +25,7 @@ const Event = ({
                 <div className='content'>
 
         <footer className='actions'>
-        <Link to={`/edit-job/${_id}`} className='btn edit-btn'>
+        <Link to={`../edit-job/${_id}`} className='btn edit-btn'>
             Edit
           </Link>
         <Form method='post' action={`../delete-page/${_id}`}>

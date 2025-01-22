@@ -56,7 +56,7 @@ npm run dev
 | - | - | - |
 |POST|/api/v1/events|Create a new event.|
 |GET|/api/v1/events|Retrieve a list of events.|
-|PATCH|/api/v1/events/:id|Update an existing event.//Not Working|
+|PATCH|/api/v1/events/:id|Update an existing event.|
 |DELETE|/api/v1/events/:id|Delete an event by ID.|
 
 -----

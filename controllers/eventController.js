@@ -15,7 +15,7 @@ export const createEvent = async (req, res) => {
 
 export const getEvent = async (req,res) =>{
     const {id} = req.params
-    const event = await Job.findById(id)
+    const event = await Event.findById(id)
     if(!event) throw new NotFoundError(`no job with id ${id}`);
     res.status(StatusCodes.OK).json({event});
   };
@@ -28,7 +28,7 @@ export const updateEvent = async (req, res) => {
     });
     if (!updatedEvent) throw new NotFoundError(`no job with id ${id}`);
   
-    res.status(StatusCodes.OK).json({ msg: 'event modified', event });
+    res.status(StatusCodes.OK).json({ msg: 'event modified', updateEvent });
   };
 
 export const deleteEvent = async (req, res) => {
